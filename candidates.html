@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidates</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="candidates-total-page">
+    <div class="cand-page">
+        <div class="cand-sec-1">
+            <h3><i class="fa-solid fa-people-group"></i>&nbsp;candidates</h3><br><br><br>
+            <ul>
+                <li><i class="fa-solid fa-house"></i>&nbsp;Dash board</li><br><br>
+                <li><i class="fa-solid fa-bars-progress"></i>&nbsp;Jobs board</li><br><br>
+                <li><i class="fa-solid fa-gear"></i>&nbsp;Settings</li><br><br>
+                <li><i class="fa-solid fa-circle-info"></i>&nbsp;Help</li><br><br><br><br><br>
+                <li><i class="fa-solid fa-right-from-bracket"></i><a href="index.html">&nbsp;Log-out</a></li>
+            </ul>
+        </div>
+        <div class="cand-sec-2">
+            <h2> <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search </h2>
+           
+            <div class="filter-container">
+                <input type="text" id="name-filter" placeholder="search by name"><br>
+                <input type="text" id="location-filter" placeholder="search by city">
+                <input type="text" id="job-filter" placeholder="search by job-role">
+            </div>
+            <div class="cand-container">
+                <table id="candidate-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Skills</th>
+                            <th>Job role</th>
+                            <th>Location</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Michel</td>
+                            <td>HTML, CSS</td>
+                            <td>HTML Developer</td>
+                            <td>Bangalore</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Harry</td>
+                            <td>JavaScript, React</td>
+                            <td>Web Developer</td>
+                            <td>Delhi</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Mike</td>
+                            <td>Java Developer</td>
+                            <td>Java Developer</td>
+                            <td>Mumbai</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sarah</td>
+                            <td>Python, Django</td>
+                            <td>Python Developer</td>
+                            <td>Chennai</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Robert</td>
+                            <td>PHP, Laravel</td>
+                            <td>SDE</td>
+                            <td>Kolkata</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Linda</td>
+                            <td>Ruby, Rails</td>
+                            <td>Tester</td>
+                            <td>Hyderabad</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>James</td>
+                            <td>C#, .NET</td>
+                            <td>Software engineer</td>
+                            <td>Pune</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Hisnberg</td>
+                            <td>Swift, iOS</td>
+                            <td>Backend Developer</td>
+                            <td>Ahemdabad</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>David</td>
+                            <td>Kotlin, Android</td>
+                            <td>Django developer</td>
+                            <td>Jaipur</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                        <tr>
+                            <td>Antony</td>
+                            <td>Go, Kubernetes</td>
+                            <td>Sales force developer</td>
+                            <td>Lucknow</td>
+                            <td><button onclick="addCandidate(this)">add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>Selected Candidates</h2>
+            <div class="selected-cand-container">
+                <table id="selected-candidate-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Skills</th>
+                            <th>Job role</th>
+                            <th>Location</th>
+                            <th>Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody id="selected-candidate-body">
+                        <!-- Selected candidates will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
